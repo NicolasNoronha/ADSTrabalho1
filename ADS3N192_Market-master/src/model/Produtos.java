@@ -9,6 +9,7 @@ public class Produtos {
 
     private int id; 
     private String nome;
+    private String quantidade;
     
     @Override
     public String toString(){
@@ -31,5 +32,11 @@ public class Produtos {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    
+     public String getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(String quantidade) {
+        this.quantidade = quantidade;
+    }
 }

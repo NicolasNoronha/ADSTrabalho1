@@ -130,6 +130,11 @@ public class FrmCliente extends javax.swing.JInternalFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        txtCPF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCPFActionPerformed(evt);
+            }
+        });
 
         lblCNPJ.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblCNPJ.setText("CNPJ:");
@@ -345,6 +350,10 @@ public class FrmCliente extends javax.swing.JInternalFrame {
         lblCNPJ.setVisible(true);
         txtCNPJ.setVisible(true);   
     }//GEN-LAST:event_rbPJActionPerformed
+
+    private void txtCPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCPFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCPFActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

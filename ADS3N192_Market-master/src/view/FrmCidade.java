@@ -55,6 +55,11 @@ public class FrmCidade extends javax.swing.JInternalFrame {
         lblNome.setText("Nome: ");
 
         txtNome.setColumns(5);
+        txtNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNomeActionPerformed(evt);
+            }
+        });
 
         btnSalvar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btnSalvar.setText("SALVAR");
@@ -127,6 +132,10 @@ public class FrmCidade extends javax.swing.JInternalFrame {
             txtNome.setText("");
         }
     }//GEN-LAST:event_btnSalvarActionPerformed
+
+    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNomeActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
