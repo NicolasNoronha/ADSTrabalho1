@@ -11,6 +11,7 @@ public class ProdutosDAO {
     public static void inserir(Produtos pro){
         String query = "INSERT INTO produtos "
                 + " ( nome, quantidade ) VALUES ( "
+           
            + " '" + pro.getNome()           + "' , "
            + "  " + pro.getQuantidade()     + " ) ";
         
@@ -26,9 +27,9 @@ public class ProdutosDAO {
         Conexao.executar( query );
     }
     
-    public static void excluir(Produtos pro){
+    public static void excluir(int idProduto){
         String query = "DELETE FROM produtos "
-                    + " WHERE id = " + pro.getId();
+                    + " WHERE id = " + idProduto;
         Conexao.executar( query );
     }
     
@@ -40,11 +41,11 @@ public class ProdutosDAO {
         if( rs != null ){
             try {
                 while ( rs.next() ) {                    
-                    Produtos cid = new Produtos();
-                    cid.setId( rs.getInt( 1 ) );
-                    cid.setNome( rs.getString( 2 ) );
-                    cid.setQuantidade(rs.getString( 3 ) );
-                    lista.add( cid );
+                    Produtos pro = new Produtos();
+                    pro.setId( rs.getInt( 1 ) );
+                    pro.setNome( rs.getString( 2 ) );
+                    pro.setQuantidade(rs.getString( 3 ) );
+                    lista.add( pro );
                 }
             } catch (Exception e) {
             }
@@ -72,5 +73,7 @@ public class ProdutosDAO {
             return null;
         }
     }
+
+    
     
 }
